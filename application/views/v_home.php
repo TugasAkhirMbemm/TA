@@ -105,13 +105,6 @@
               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
             </div>
           </div>
-          <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-            <div class="box">
-              <div class="icon"><a href=""><i class="fa fa-shopping-bag"></i></a></div>
-              <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-              <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div> -->
         </div>
 
       </div>
@@ -261,15 +254,6 @@
                 <p>+1 5589 55488 55s</p>
               </div>
             </div>
-
-            <!-- <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-            </div> -->
-
           </div>
 
           <div class="col-lg-5 col-md-8">
@@ -289,7 +273,7 @@
                   <textarea class="form-control" name="message" rows="5" data-rule="required" placeholder="Masukan pesan yang ingin anda sampaikan......"></textarea>
                   <div class="validation"></div>
                 </div>
-                <div class="text-center"><button type="submit">Kirim Pesan</button></div>
+                <div class="text-center"><button class="btn" type="submit">Kirim Pesan</button></div>
               </form>
             </div>
           </div>

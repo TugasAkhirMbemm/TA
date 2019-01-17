@@ -26,6 +26,9 @@
   <!-- Main Stylesheet File -->
   <link href="<?php echo base_url() ?>master/assets/css/style.css" rel="stylesheet">
 
+  <!-- Dropify -->
+  <link rel="stylesheet" href="<?php echo base_url() ?>master/assets/dropify/dist/css/dropify.min.css">
+
    
 
 
