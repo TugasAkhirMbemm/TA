@@ -19,7 +19,7 @@
     <div class="col-md-12">
         <div class="box">
             <h2><i class="fa fa-user-plus"></i> Daftar Akun</h2>
-            <form autocomplete="off" method="post" action="<?php echo base_url(). 'Daftar/buat'; ?>" enctype="multipart/form-data">
+            <form autocomplete="off" method="post" action="<?php echo base_url("Daftar/buat")?>" enctype="multipart/form-data">
             	<hr>
                  <div class="form-group">
                     <label for="name">Nama</label>

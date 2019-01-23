@@ -27,6 +27,13 @@ class data_model extends CI_Model {
 		$query = $this->db->query("SELECT * FROM jenjang ORDER BY id_jenjang ASC");
 		return $query;
 	}
+	public function get_daftar_siswa(){
+		$this->db->select('data_awal.*, jenjang.*');
+		$this->db->from('data_awal');
+		$this->db->join('jenjang', 'jenjang.id_jenjang = data_awal.id_jenjang');
+		$data-> $this->db->get();
+		return $data;
+	}
 	public function get_jadwal_TK(){
 		$query = $this->db->query("SELECT * FROM jadwal_test WHERE id_jenjang = 1 ");
 		return $query;

@@ -9,7 +9,7 @@
 </section>
 <br>
 <div class="container">
-   <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/PPDB/upload_pndaftaran'; ?>" enctype="multipart/form-data">
+   <form autocomplete="off" method="post" action="<?php echo base_url("PPDB/t_upload_pndaftaran")?>" enctype="multipart/form-data">
        <div class="row"> 
             <div class="card" style="width: 50%; margin-left: 25%">
                 <div class="card-header">
