@@ -32,7 +32,10 @@
 					<div class="form-group">
 						<label for="jenjang">Jenjang</label>
 						<select name="id_jenjang" class="form-control" required="">
-							<option>--Pilih Jenjang Pendidikan--</option>
+							<option disabled="">--Pilih Jenjang Pendidikan--</option>
+							 <?php foreach ($jenjang->result() as $jnj) { ?>
+							 	<option value="<?php  echo $jnj -> id_jenjang?>"><?php echo $jnj-> nama_jenjang; ?></option>
+							 <?php } ?>
 						</select>
 					</div>
 				</div>

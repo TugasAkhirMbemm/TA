@@ -9,23 +9,25 @@
 </section>
 <br>
 <div class="container">
-	<div class="row">
-		<div class="card" style="width: 50%; margin-left: 25%">
-			<div class="card-header">
-				<h2>Upload Bukti Pendaftaran</h2>
-			</div>
-			<div class="card-body">
-				<div class="form-group">
-					<label for="upload_file">Masukan Gambar Bukti</label>
-					<br>
-					<input type="file" id="input-file-now" class="dropify" name="gambar_bukti_daftarulang" required="" />
-				</div>
-			</div>
-			<div class="card-footer text-right">
-				<button style="background-color: #10ac84" class="btn btn-success" name="btnSimpan">Kirim</button>
-			</div>
-		</div>
-	</div>
+   <form autocomplete="off" method="post" action="<?php echo base_url(). 'index.php/PPDB/upload_pndaftaran'; ?>" enctype="multipart/form-data">
+       <div class="row"> 
+            <div class="card" style="width: 50%; margin-left: 25%">
+                <div class="card-header">
+                    <h2>Upload Bukti Pendaftaran</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                         <label for="upload_file">Masukan Gambar Bukti</label>
+                         <br>
+                         <input type="file" id="input-file-now" class="dropify" name="gambar_bukti_pendaftaran" required="" />
+                    </div>
+                </div>
+                 <div class="card-footer text-right">
+                    <button style="background-color: #10ac84" class="btn btn-success" name="btnSimpan">Kirim</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 <!-- <ul class="nav nav-tabs">
@@ -51,14 +53,14 @@
 <?php $this->load->view('side/js') ?>
 
 <script src="<?php echo base_url() ?>master/assets/dropify/dist/js/dropify.min.js"></script>
- <script>
-        function deleted(param){
-   var proc = window.confirm('Are you sure delete this data?');
-   if(proc){
-      document.location='<?php echo base_url(); ?>admin/Galery/hapus/'+param;
-    }
+<script>
+    function deleted(param){
+       var proc = window.confirm('Are you sure delete this data?');
+       if(proc){
+          document.location='<?php echo base_url(); ?>admin/Galery/hapus/'+param;
+      }
   }
-    $(document).ready(function() {
+  $(document).ready(function() {
         // Basic
         $('.dropify').dropify();
 
@@ -98,4 +100,4 @@
             }
         })
     });
-    </script>
+</script>

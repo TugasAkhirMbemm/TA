@@ -13,7 +13,7 @@
           <li class="menu-has-children <?php if($this->uri->segment('1')=="PPDB"){ echo "active";}?>" href="#" ><a href="#">PPDB</a>
             <ul>
               <li class=""><a href="<?php echo base_url('PPDB/Panduan') ?>">Panduan</a></li>
-              <li class=""><a href="<?php echo base_url('PPDB/Daftar') ?>">Daftar</a></li>
+              <li class=""><a href="<?php echo base_url('PPDB/Daftar_Siswa') ?>">Daftar</a></li>
               <li class="menu-has-children"><a href="#">Upload Bukti</a>
                 <ul>
                   <li><a href="<?php echo base_url('PPDB/UploadPendaftaran') ?>">Upload Bukti Pendaftaran</a></li>

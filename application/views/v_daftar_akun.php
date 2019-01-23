@@ -26,17 +26,13 @@
                     <input type="text" name="nama" class="form-control" required >
                 </div>
                 <div class="form-group">
-                    <label for="name">Username</label>
-                    <input type="text" name="user" class="form-control" required>
+                    <label for="name">Email</label>
+                    <input type="text" name="email" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="number">Password</label>
-                    <input type="Password" name="pass" class="form-control" required>
+                    <input type="Password" name="password" class="form-control" required>
                 </div>
-                <div class="form-group">
-				    <label for="exampleFormControlFile1">Pilih Gambar Profile</label>
-				    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar_user" required="">
-				</div>
 				<div>
 					<br>
                 	<button style="float: right; background-color: #10ac84" class="btn btn-success" name="btnSimpan">Simpan</button>
@@ -45,6 +41,7 @@
             </div>
         </div>
     </div>
+    <br>
     <br>
 
 

@@ -4,28 +4,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Daftar extends CI_Controller {
 
 	function __construct()
-	{
-		parent::__construct();
-	}
+    {
+	parent::__construct();
+        $this->load->model('data_model');
+    	$this->load->model('core');
+    }
 	public function index()
 	{
-		
-
-	$data = array(
-			'success' => $this->session->flashdata('success'),
-			'error' => $this->session->flashdata('error'),
-			'jenjang' => $this->data_model->get_dataawal(),
-	);
-	
-		$this->load->view('v_daftar_siswa', $data);
-		}
-		else{
-
-		$this->load->view('headermhs');
-		$this->load->view('home');
-		$this->load->view('footer');
-		}
 		$this->load->view('v_daftar_akun');
+	}
+	public function buat(){
+		if(isset($_POST['btnSimpan'])){
+        $nama = $this -> input -> post ('nama');
+       	$email = $this -> input -> post ('email');
+        $pass = $this -> input -> post ('password');
+        $data = array(
+        'nama_user'=>$nama,
+        'email_user'=>$email,
+        'password_user'=>md5($pass)
+        );
+        $insert_data = $this->db->insert('user',$data);
+      if ($insert_data >= 0) {
+      	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
+        header('location:'.base_url("Daftar"));
+       } else{
+       $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
+       header('location:'.base_url("Daftar"));
+       }
+    }else{
+      echo "gagal";
+    }
 
-	
+  }	
 }
