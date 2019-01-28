@@ -29,6 +29,8 @@
   <!-- Dropify -->
   <link rel="stylesheet" href="<?php echo base_url() ?>master/assets/dropify/dist/css/dropify.min.css">
 
+  <!-- SweetAlert -->
+  <link rel="stylesheet" href="<?php echo base_url() ?>master/assets/sweetalert/sweetalert.css"> 
    
 
 

@@ -36,7 +36,7 @@ class PPDB extends CI_Controller {
 			$insert_data = $this->db->insert("data_awal",$data); 
 		}
 		 if ($insert_data >= 0) {
-        $this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di kirim"));
+        $this->session->set_flashdata("Pesan",$this->core->alert_succes("Anda telah terdaftar, Silahkan menunggu pengumuman"));
         redirect(base_url().'PPDB/Daftar_Siswa');
       	}else{
         $this->session->set_flashdata("Pesan",$this->core->alert_time("Data gagal di kirim"));

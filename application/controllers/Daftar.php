@@ -21,12 +21,13 @@ class Daftar extends CI_Controller {
         $data = array(
         'nama_user'=>$nama,
         'email_user'=>$email,
+        'id_jenjang' => 2, 
         'password_user'=>md5($pass)
         );
         $insert_data = $this->db->insert('user',$data);
       if ($insert_data >= 0) {
-      	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
-        header('location:'.base_url("Daftar"));
+      	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan, Silahkan Login"));
+        header('location:'.base_url("Home"));
        } else{
        $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
        header('location:'.base_url("Daftar"));

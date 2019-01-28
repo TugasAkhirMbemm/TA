@@ -35,7 +35,7 @@
                 </div>
 				<div>
 					<br>
-                	<button style="float: right; background-color: #10ac84" class="btn btn-success" name="btnSimpan">Simpan</button>
+                	<button style="float: right; background-color: #10ac84" class="btn btn-success" name="btnSimpan">Daftar</button>
                 </div>
             </form>
             </div>
