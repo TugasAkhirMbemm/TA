@@ -10,9 +10,9 @@
           </a>
         </li>
         <li>
-          <a class="Upload_DU" href="<?php echo base_url('Upload_DU/UploadDaftarUlang') ?>">Upload</a>
+          <a class="<?php if($this->uri->segment('1')=="Upload_DU"){ echo "active";}?>" href="<?php echo base_url('Upload_DU/UploadDaftarUlang') ?>">Upload</a>
         </li>
-        <li class="menu-has-children" href="#" ><a class="<?php if($this->uri->segment('1')=="Jadwal"){ echo "active";}?>" href="#">Jadwal</a>
+        <li class="menu-active" href="#" ><a class="<?php if($this->uri->segment('1')=="Jadwal"){ echo "active";}?>" href="#">Jadwal</a>
           <ul>
             <li><a href="<?php echo base_url('Jadwal/JadwalTestTK') ?>">Jadwal Tes TK</a></li>
             <li><a href="<?php echo base_url('Jadwal/JadwalTestSD') ?>">Jadwal Tes SD</a></li>

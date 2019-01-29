@@ -1,5 +1,5 @@
 <?php $this-> load->view('side/head') ?>
-<?php $this-> load->view('side/navbar2') ?>
+<?php $this-> load->view('side/navbar_DataSiswa') ?>
 
 
 <section id="head">
