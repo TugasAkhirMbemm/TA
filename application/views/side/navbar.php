@@ -44,11 +44,11 @@
                     </div>
                     <p class="text-center">
                         <!-- <button name="login" type="submit" class="btn btn-primary"><i class="fa fa-sign-in"></i> Masuk</button> -->
-                        <a href="<?php echo base_url('Data_siswa') ?>" class="btn btn-primary" type="submit">Masuk</a>
+                        <a href="<?php echo base_url('Data_siswa') ?>" class="btn btn-primary">Masuk</a>
                     </p>
                 </form>
-                <p class="text-center text-muted">Belum Punya Akun?</p>
-                <p class="text-center text-muted"><a href="<?php echo base_url('Daftar') ?>"><strong>Daftar</strong></a>! Segera punya akun!</p>
+               <!--  <p class="text-center text-muted">Belum Punya Akun?</p>
+                <p class="text-center text-muted"><a href="<?php echo base_url('Daftar') ?>"><strong>Daftar</strong></a>! Segera punya akun!</p> -->
             </div>
           </div>
         </div>
