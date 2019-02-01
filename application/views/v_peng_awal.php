@@ -1,11 +1,13 @@
 <?php $this->load->view('side/head') ?>
-<?php $this->load->view('side/navbar3') ?>
+<?php $this->load->view('side/navbar2') ?>
 <section id="head">
   <div class="container wow fadeIn">
     <div class="section-header"><br>
       <h4 class="section-title" style="color: #fff; font-size: 25px">Yayasan Al-Baitul Amien</h4>
     </div>
   </div>
+</section>
+<br>
 </section>
 <br>
 
