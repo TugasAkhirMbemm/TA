@@ -16,11 +16,6 @@
 <!-- Template Main Javascript File -->
 <script src="<?php echo base_url() ?>master/assets/js/main.js"></script>
 
-<!-- galery -->
-<script src="<?php echo base_url() ?>master/assets/js/galery.js"></script>
-
 <!-- SweetAlert -->
 <script src="<?php echo base_url() ?>master/assets/sweetalert/sweetalert.min.js"></script>
 <script src="<?php echo base_url() ?>master/assets/sweetalert/jquery.sweet-alert.custom.js"></script>
-
-

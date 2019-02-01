@@ -11,7 +11,7 @@ class Data_siswa extends CI_Controller {
     }
 	public function index()
 	{
-		$this->load->view('v_data_siswa');
+		$this->load->view('v_entri_data_siswa');
 	}
 	public function buat(){
 		if(isset($_POST['btnSimpan'])){

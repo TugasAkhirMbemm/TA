@@ -291,6 +291,9 @@
 <?php $this->load->view('side/footer') ?>
 <?php $this->load->view('side/js') ?>
 
+<!-- galery -->
+<script src="<?php echo base_url() ?>master/assets/js/galery.js"></script>
+
 <?php if ($this->session->flashdata()) { ?>
     <?php echo $this->session->flashdata('Pesan'); ?>                    
 <?php } ?>
