@@ -74,31 +74,5 @@ class PPDB extends CI_Controller {
       $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
     }
   }
-	public function UploadDaftarUlang(){
-		$this->load->view('v_upload_bukti_daftarulang');
-		
-	}
-	public function JadwalTestTK(){
-		$data['jadwalTK'] = $this->data_model->get_jadwal_TK();
-		$this->load->view('v_jadwal_test_tk',$data);
-		
-	}
-	public function JadwalTestSD(){
-		$data['jadwalSD'] = $this->data_model->get_jadwal_SD();
-		$this->load->view('v_jadwal_test_sd',$data);
-		
-	}
-	public function JadwalTestSMP(){
-		$data['jadwalSMP'] = $this->data_model->get_jadwal_SMP();
-		$this->load->view('v_jadwal_test_smp',$data);
-		
-	}
-	public function Peng_Awal(){
-		$this->load->view('v_peng_awal');
-		
-	}
-	public function Peng_Akhir(){
-		$this->load->view('v_peng_akhir');
-		
-	}
+	
 }

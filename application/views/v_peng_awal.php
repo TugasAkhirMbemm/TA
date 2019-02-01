@@ -1,5 +1,7 @@
 <?php $this->load->view('side/head') ?>
 <?php $this->load->view('side/navbar2') ?>
+<?php $this->load->view('side/navbar_Pengumuman') ?>
+
 <section id="head">
   <div class="container wow fadeIn">
     <div class="section-header"><br>

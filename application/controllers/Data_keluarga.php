@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Data_siswa extends CI_Controller {
+class Data_keluarga extends CI_Controller {
 
 	function __construct()
     {
@@ -9,13 +9,8 @@ class Data_siswa extends CI_Controller {
       $this->load->model('data_model');
     	$this->load->model('core');
     }
-	public function index()
-	{
-    $data['jenis_kel'] = $this->data_model->get_jenis_kelamin();
-    $data['agama'] = $this->data_model->get_agama();
-    $data['warga'] = $this->data_model->get_kewarganegaraan();
-    $data['gol_darah'] = $this->data_model->get_gol_darah();
-		$this->load->view('v_entri_data_siswa',$data);
+	public function index(){
+    
 	}
 	public function buat(){
 		if(isset($_POST['btnSimpan'])){
