@@ -66,8 +66,9 @@
                                   <label class="control-label text-left col-md-3">Jenis Kelamin</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="jenis_kelamin">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($jenis_kel->result() as $jk ) { ?>
+                                          <option value="<?php echo $jk -> id_jenis_kelamin ?>"><?php echo $jk-> jenis_kelamin; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -75,8 +76,9 @@
                                   <label class="control-label text-left col-md-3">Agama</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="agama">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($agama->result() as $a ) { ?>
+                                          <option value="<?php echo $a -> id_agama ?>"><?php echo $a-> nama_agama; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -84,8 +86,9 @@
                                   <label class="control-label text-left col-md-3">Kewarganegaraan</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="kewarganegraan">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($warga->result() as $w ) { ?>
+                                          <option value="<?php echo $w -> id_kewarganegaraan ?>"><?php echo $w-> status_warganegara; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -152,8 +155,9 @@
                                   <label class="control-label text-left col-md-3">Agama Ayah</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="agama_ayah">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($agama->result() as $a ) { ?>
+                                          <option value="<?php echo $a -> id_agama ?>"><?php echo $a-> nama_agama; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -161,8 +165,9 @@
                                   <label class="control-label text-left col-md-3">Agama Ibu</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="agama_ibu">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($agama->result() as $a ) { ?>
+                                          <option value="<?php echo $a -> id_agama ?>"><?php echo $a-> nama_agama; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -182,8 +187,9 @@
                                   <label class="control-label text-left col-md-3">Kewarganegaraan Ayah</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="kewarganegraan_ayah">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($warga->result() as $w ) { ?>
+                                          <option value="<?php echo $w -> id_kewarganegaraan ?>"><?php echo $w-> status_warganegara; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -191,8 +197,9 @@
                                   <label class="control-label text-left col-md-3">Kewarganegaraan Ibu</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="kewarganegraan_ibu">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($warga->result() as $w ) { ?>
+                                          <option value="<?php echo $w -> id_kewarganegaraan ?>"><?php echo $w-> status_warganegara; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -350,8 +357,9 @@
                                   <label class="control-label text-left col-md-3">Jenis Kelamin Saudara Kandung</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="jenis_kelamin">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($jenis_kel->result() as $jk ) { ?>
+                                          <option value="<?php echo $jk -> id_jenis_kelamin ?>"><?php echo $jk-> jenis_kelamin; ?></option>
+                                        <?php  } ?>
                                       </select>
                                   </div>
                               </div>
@@ -412,8 +420,9 @@
                                   <label class="control-label text-left col-md-3">Golongan Darah</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="gol_darah">
-                                          <option value="">Male</option>
-                                          <option value="">Female</option>
+                                        <?php foreach ($gol_darah->result() as $gol) { ?>
+                                          <option value="<?php echo $gol -> id_golongan_darah ?>"><?php echo $gol -> golongan_darah; ?></option>
+                                        <?php } ?>
                                       </select>
                                   </div>
                               </div>

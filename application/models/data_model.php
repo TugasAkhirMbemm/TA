@@ -45,6 +45,22 @@ class data_model extends CI_Model {
 	public function get_jadwal_SMP(){
 		$query = $this->db->query("SELECT * FROM jadwal_test WHERE id_jenjang = 3 ");
 		return $query;
+	}
+	public function get_jenis_kelamin(){
+		$query = $this->db->query("SELECT * FROM jenis_kelamin ORDER BY id_jenis_kelamin ASC");
+		return $query;
+	}
+	public function get_agama(){
+		$query = $this->db->query("SELECT * FROM agama ORDER BY id_agama ASC");
+		return $query;
+	}
+	public function get_kewarganegaraan(){
+		$query = $this->db->query("SELECT * FROM kewarganegaraan ORDER BY id_kewarganegaraan ASC");
+		return $query;
+	}
+	public function get_gol_darah(){
+		$query = $this->db->query("SELECT * FROM golongan_darah ORDER BY id_golongan_darah ASC");
+		return $query;
 	}						
 }
 
