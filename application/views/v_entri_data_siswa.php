@@ -36,18 +36,24 @@
                       <h4 class="m-b-0 text-white">Entri Data Siswa</h4>
                   </div>
                   <div class="card-body">
-                      <form action="#" class="form-horizontal form-bordered">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Data_siswa/t_entri_data_siswa")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Lengkap</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="nama_lengkap" required="">
+                                      <input type="text" placeholder="..." class="form-control" name="nama_lengkap" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Panggilan</label>
                                   <div class="col-md-9">
                                       <input type="text" placeholder="..." class="form-control" name="nama_panggilan" required="">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Tempat Lahir</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="tempat_lahir" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -59,7 +65,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Usia</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="usia" required="">
+                                      <input type="text" placeholder="..." class="form-control" name="usia" size="3" maxlength="3" onKeyPress="return goodchars(event,'0123456789',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -101,7 +107,13 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Anak ke</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="anak_ke" required="">
+                                      <input type="text" placeholder="..." class="form-control" name="anak_ke" size="3" maxlength="3" onKeyPress="return goodchars(event,'0123456789',this)" required="">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">No. Hp Siswa</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="no_hp" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -142,13 +154,13 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="nama_ayah">
+                                      <input type="text" placeholder="..." class="form-control" name="nama_ayah" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="nama_ibu">
+                                      <input type="text" placeholder="..." class="form-control" name="nama_ibu" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)" required="">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -266,25 +278,27 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Penghasilan Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="peghasilan_ayah">
+                                      <input type="text" placeholder="..." class="form-control" name="peghasilan_ayah" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRp,.',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Rp) </small>
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Penghasilan Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="penghasilan_ibu">
+                                      <input type="text" placeholder="..." class="form-control" name="penghasilan_ibu" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRp,.',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Rp) </small>
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Jumlah Tanggungan Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="tanggungan_ayah">
+                                      <input type="text" placeholder="..." class="form-control" name="tanggungan_ayah" size="3" maxlength="3" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Jumlah Tanggungan Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="tanggungan_ibu">
+                                      <input type="text" placeholder="..." class="form-control" name="tanggungan_ibu" size="3" maxlength="3" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -314,25 +328,25 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">No.Telephone Rumah Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="no_telp_rumah_ayah">
+                                      <input type="text" placeholder="..." class="form-control" name="no_telp_rumah_ayah" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">No.Telephone Rumah Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="no_telp_rumah_ibu">
+                                      <input type="text" placeholder="..." class="form-control" name="no_telp_rumah_ibu" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">No.Telephone Kantor Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="no_telp_kantor_ayah">
+                                      <input type="text" placeholder="..." class="form-control" name="no_telp_kantor_ayah" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">No.Telephone Kantor Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="no_telp_kantor_ibu">
+                                      <input type="text" placeholder="..." class="form-control" name="no_telp_kantor_ibu" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -350,7 +364,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Saudara Kandung</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="nama_sdr_kandung">
+                                      <input type="text" placeholder="..." class="form-control" name="nama_sdr_kandung" size="30" maxlength="100" onKeyPress="return goodchars(event,'abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ',this)">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -378,7 +392,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">No. Induk Saudara Kandung</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="no_induk_sdr_kandung">
+                                      <input type="text" placeholder="..." class="form-control" name="no_induk_sdr_kandung" size="3" maxlength="16" onKeyPress="return goodchars(event,'0123456789',this)">
                                   </div>
                               </div>
                           </div>
@@ -413,7 +427,8 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Berat Badan</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="berat_badan">
+                                      <input type="text" placeholder="..." class="form-control" name="berat_badan" size="3" maxlength="5" onKeyPress="return goodchars(event,'0123456789 kgKG',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Kg) </small>
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -530,6 +545,12 @@
 
 <?php $this->load->view('side/footer') ?>
 <?php $this->load->view('side/js') ?>
+
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                    
+<?php } ?>
+
+
 <script src="<?php echo base_url() ?>master/assets/dropify/dist/js/dropify.min.js"></script>
 <script>
     function deleted(param){
@@ -585,6 +606,47 @@ $(document).ready(function(){
     $(this).tab('show');
   });
 });
+</script>
+
+<script language="javascript">
+  function getkey(e)
+  {
+    if (window.event)
+     return window.event.keyCode;
+   else if (e)
+     return e.which;
+   else
+     return null;
+ }
+ function goodchars(e, goods, field)
+ {
+  var key, keychar;
+  key = getkey(e);
+  if (key == null) return true;
+
+  keychar = String.fromCharCode(key);
+  keychar = keychar.toLowerCase();
+  goods = goods.toLowerCase();
+
+// check goodkeys
+if (goods.indexOf(keychar) != -1)
+  return true;
+// control keys
+if ( key==null || key==0 || key==8 || key==9 || key==27 )
+ return true;
+
+if (key == 13) {
+  var i;
+  for (i = 0; i < field.form.elements.length; i++)
+    if (field == field.form.elements[i])
+      break;
+    i = (i + 1) % field.form.elements.length;
+    field.form.elements[i].focus();
+    return false;
+  };
+// else return false
+return false;
+}
 </script>
 
 
