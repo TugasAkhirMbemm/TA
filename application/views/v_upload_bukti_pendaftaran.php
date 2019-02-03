@@ -52,6 +52,10 @@
 <?php $this->load->view('side/footer') ?>
 <?php $this->load->view('side/js') ?>
 
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                    
+<?php } ?>
+
 <script src="<?php echo base_url() ?>master/assets/dropify/dist/js/dropify.min.js"></script>
 <script>
     function deleted(param){

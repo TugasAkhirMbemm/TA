@@ -9,23 +9,25 @@
 </section>
 <br>
 <div class="container">
-	<div class="row">
-		<div class="card" style="width: 50%; margin-left: 25%">
-			<div class="card-header">
-				<h2>Upload Bukti Daftar Ulang</h2>
-			</div>
-			<div class="card-body">
-				<div class="form-group">
-					<label for="upload_file">Masukan Gambar Bukti</label>
-					<br>
-					<input type="file" id="input-file-now" class="dropify" name="gambar_bukti_daftarulang" required="" />
-				</div>
-			</div>
-			<div class="card-footer text-right">
-				<button style="background-color: #10ac84" class="btn btn-success" name="btnSimpan">Kirim</button>
-			</div>
-		</div>
-	</div>
+    <form autocomplete="off" method="post" action="<?php echo base_url("Upload_DU/t_upload_bukti_daftar_ulang")?>" enctype="multipart/form-data">
+    	<div class="row">
+    		<div class="card" style="width: 50%; margin-left: 25%">
+    			<div class="card-header">
+    				<h2>Upload Bukti Daftar Ulang</h2>
+    			</div>
+    			<div class="card-body">
+    				<div class="form-group">
+    					<label for="upload_file">Masukan Gambar Bukti</label>
+    					<br>
+    					<input type="file" id="input-file-now" class="dropify" name="gambar_bukti_daftarulang" required="" />
+    				</div>
+    			</div>
+    			<div class="card-footer text-right">
+    				<button style="background-color: #10ac84" class="btn btn-success" name="btnSimpan">Kirim</button>
+    			</div>
+    		</div>
+    	</div>
+    </form>
 </div>
 
 <!-- <ul class="nav nav-tabs">
@@ -48,8 +50,14 @@
 </ul> -->
 <br>
 
-	<?php $this->load->view('side/footer') ?>
-	<?php $this->load->view('side/js') ?>
+<?php $this->load->view('side/footer') ?>
+<?php $this->load->view('side/js') ?>
+
+<?php if ($this->session->flashdata()) { ?>
+    <?php echo $this->session->flashdata('Pesan'); ?>                    
+<?php } ?>
+
+
  <script src="<?php echo base_url() ?>master/assets/dropify/dist/js/dropify.min.js"></script>
  <script>
         function deleted(param){

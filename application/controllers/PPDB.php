@@ -59,19 +59,20 @@ class PPDB extends CI_Controller {
             $upload_data = $this -> upload -> data ();
             $foto = "gallery/Bukti_pendaftaran/".$upload_data['file_name'];
         $data = array(
+        'id_user' => 5,
         'nama_bukti_gambar' => $foto
         );
         $insert_data = $this->db->insert('bukti_transaksi',$data);
       }
       if ($insert_data >= 0) {
-        $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil di simpan"));
+        $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil terkirim"));
         redirect(base_url().'PPDB/UploadPendaftaran');
        } else{
-        $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan"));
+        $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal terkirim"));
         redirect(base_url().'PPDB/UploadPendaftaran');
        }
     }else{
-      $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal di simpan, cek gambar"));
+      $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal terkirim, cek gambar"));
     }
   }
 	
