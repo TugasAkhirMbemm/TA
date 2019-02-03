@@ -25,11 +25,7 @@ class Riwayat_kesehatan extends CI_Controller {
         $alergi = $this -> input -> post ('alergi');
         $penglihatan = $this -> input -> post ('penglihatan');
         $pendengaran = $this -> input -> post ('pendengaran');
-        $penampilan = $this -> input -> post ('penampilan');
-        $ciri_fisik = $this -> input -> post ('ciri_fisik');
-        $ciri_kepribadian = $this -> input -> post ('ciri_kepribadian');
-        $bakat_khusus = $this -> input -> post ('bakat');
-        $prestasi = $this -> input -> post ('presatsi');
+        $penampilan = $this -> input -> post ('penampilan'); 
         $data = array(
         'id_siswa'=> 2,
         'berat_badan'=>$berat_badan,
@@ -43,14 +39,24 @@ class Riwayat_kesehatan extends CI_Controller {
         'alergi_makanan_dan_obat'=>$alergi,
         'penglihatan'=>$penglihatan,
         'pendengaran'=>$pendengaran,
-        'penampilan'=>$penampilan,
+        'penampilan'=>$penampilan
+        );
+        $insert_data = $this->db->insert('kesehatan_anak',$data);
+
+        $ciri_fisik = $this -> input -> post ('ciri_fisik');
+        $ciri_kepribadian = $this -> input -> post ('ciri_kepribadian');
+        $bakat_khusus = $this -> input -> post ('bakat');
+        $prestasi = $this -> input -> post ('presatsi');
+        $data2 = array(
+        'id_siswa'=> 2,
         'ciri_fisik_yang_menonjol'=>$ciri_fisik,
         'ciri_kepribadian_yang_menonjol'=>$ciri_kepribadian,
         'bakat_khusus_yang_menonjol'=>$bakat_khusus,
         'prestasi_yang_pernah_diraih'=>$prestasi
         );
-        $insert_data = $this->db->insert('kesehatan_anak',$data);
-      if ($insert_data >= 0) {
+        $insert_data2 = $this->db->insert('ciri_khas_anak',$data2);
+
+      if ($insert_data && $insert_data2  >= 0) {
       	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         header('location:'.base_url("Data_siswa"));
        } else{
