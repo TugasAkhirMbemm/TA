@@ -10,9 +10,9 @@ class Riwayat_kesehatan extends CI_Controller {
     	$this->load->model('core');
     }
 	public function index(){
-    
+
 	}
-	public function buat(){
+	public function t_entri_riwayat_kesehatan(){
 		if(isset($_POST['btnSimpan'])){
         $nama = $this -> input -> post ('nama');
        	$email = $this -> input -> post ('email');

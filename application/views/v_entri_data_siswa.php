@@ -149,7 +149,7 @@
                       <h4 class="m-b-0 text-white">Entri Data Keluarga</h4>
                   </div>
                   <div class="card-body">
-                      <form action="#" class="form-horizontal form-bordered">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Data_keluarga/t_entri_data_keluarga")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Ayah</label>
@@ -278,14 +278,14 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Penghasilan Ayah</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="peghasilan_ayah" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRp,.',this)">
+                                      <input type="text" placeholder="..." class="form-control" name="penghasilan_ayah" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRP,.',this)">
                                       <small class="form-control-feedback"> Diberi satuan (Rp) </small>
                                   </div>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Penghasilan Ibu</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="penghasilan_ibu" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRp,.',this)">
+                                      <input type="text" placeholder="..." class="form-control" name="penghasilan_ibu" size="3" maxlength="20" onKeyPress="return goodchars(event,'0123456789 rpRP,.',this)">
                                       <small class="form-control-feedback"> Diberi satuan (Rp) </small>
                                   </div>
                               </div>
@@ -422,7 +422,7 @@
                       <h4 class="m-b-0 text-white">Entri Riwayat Kesehatan</h4>
                   </div>
                   <div class="card-body">
-                      <form action="#" class="form-horizontal form-bordered">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Riwayat_kesehatan/t_entri_riwayat_kesehatan")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Berat Badan</label>
