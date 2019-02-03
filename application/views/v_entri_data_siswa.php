@@ -432,6 +432,13 @@
                                   </div>
                               </div>
                               <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Tinggi Badan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="tinggi_badan" size="3" maxlength="6" onKeyPress="return goodchars(event,'0123456789 cmCM',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Cm) </small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Golongan Darah</label>
                                   <div class="col-md-9">
                                       <select class="form-control custom-select" name="gol_darah">

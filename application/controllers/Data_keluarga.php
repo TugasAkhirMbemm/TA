@@ -82,7 +82,7 @@ class Data_keluarga extends CI_Controller {
         'kesempatan_berkomunikasi_dg_ibu'=>$lama_komunikasi_dengan_ibu,
         );
         $insert_data = $this->db->insert('keluarga',$data);
-        
+
         $nama_saudara_kandung = $this -> input -> post ('nama_sdr_kandung');
         $jk_saudara_kandung = $this -> input -> post ('jenis_kelamin');
         $pend_saudara_kandung = $this -> input -> post ('pend_sdr_kandung');
@@ -98,7 +98,7 @@ class Data_keluarga extends CI_Controller {
         );
         $insert_data2 = $this->db->insert('saudara_kandung_anak',$data2);
       if ($insert_data && $insert_data2>= 0) {
-      	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan, Silahkan Login"));
+      	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         header('location:'.base_url("Data_siswa"));
        } else{
        $this->session->set_flashdata("Pesan",$this->core->alert_time("Data Gagal di simpan"));
