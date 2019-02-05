@@ -88,7 +88,7 @@ class Data_keluarga extends CI_Controller {
         $pend_saudara_kandung = $this -> input -> post ('pend_sdr_kandung');
         $kelas_saudara_kandung = $this -> input -> post ('kls_sdr_kandung');
         $no_induk_saudara_kandung = $this -> input -> post ('no_induk_sdr_kandung');
-        $data2 = array(
+        $data1 = array(
         'id_siswa'=> 2,
         'nama_saudara_kandung'=>$nama_saudara_kandung,
         'id_jenis_kelamin'=>$jk_saudara_kandung,
@@ -96,8 +96,23 @@ class Data_keluarga extends CI_Controller {
         'kelas_saudara_kandung'=>$kelas_saudara_kandung,
         'no_induk_saudara_kandung'=>$no_induk_saudara_kandung   
         );
-        $insert_data2 = $this->db->insert('saudara_kandung_anak',$data2);
-      if ($insert_data && $insert_data2>= 0) {
+        $insert_data1 = $this->db->insert('saudara_kandung_anak',$data1);
+
+        $status_tempat_tinggal = $this -> input -> post('status_tempat_tinggal');
+        $jarak_rumah_ke_sekolah = $this -> input -> post('jarak_rumah_ke_sekolah');
+        $luas_bangunan_rumah = $this -> input -> post('luas_bangunan_rumah');
+        $jumlah_kamar = $this -> input -> post('jumlah_kamar');
+        $data2 = array(
+          'id_siswa' => 2,
+          'status_tempat_tinggal' => $status_tempat_tinggal,
+          'jarak_rumah_ke_sekolah' => $jarak_rumah_ke_sekolah,
+          'luas_bangunan_rumah' => $luas_bangunan_rumah,
+          'jumlah_kamar' => $jumlah_kamar 
+        );
+        $insert_data2 = $this ->db->insert('data_tempat_tinggal',$data2);
+
+
+      if ($insert_data && $insert_data1 && $insert_data2 >= 0) {
       	$this->session->set_flashdata("Pesan",$this->core->alert_succes("Data Berhasil di simpan"));
         header('location:'.base_url("Data_siswa"));
        } else{

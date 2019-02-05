@@ -19,10 +19,13 @@
       <a class="nav-link active" data-toggle="tab" href="#menu1">Data Siswa</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu2">Data Keluarga</a>
+      <a class="nav-link" data-toggle="tab" href="#menu2">Data Anak</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#menu3">Riwayat Kesehatan</a>
+      <a class="nav-link" data-toggle="tab" href="#menu3">Data Keluarga</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu4">Kuisoner</a>
     </li>
   </ul>
 
@@ -38,6 +41,9 @@
                   <div class="card-body">
                       <form autocomplete="off" method="post" action="<?php echo base_url("Data_siswa/t_entri_data_siswa")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-3">I. Data Anak</h3>
+                              </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Lengkap</label>
                                   <div class="col-md-9">
@@ -101,13 +107,68 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Tinggal Bersama</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="tinggal_bersama" required="">
+                                      <select class="form-control custom-select" name="tinggal_bersama" required="">
+                                          <option>Orang Tua</option>
+                                          <option>Wali</option>
+                                          <option>Lainnya</option>
+                                      </select>
                                   </div>
                               </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Bahasa Sehari-hari Di Rumah</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="bahasa_sehari_hari" required="">
+                                          <option>Indonesia</option>
+                                          <option>Jawa</option>
+                                          <option>Lainnya</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <!-- <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Tinggal Bersama</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="tinggal_bersama" required="">
+                                  </div>
+                              </div> -->
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Anak ke</label>
                                   <div class="col-md-9">
                                       <input type="text" placeholder="..." class="form-control" name="anak_ke" size="3" maxlength="3" onKeyPress="return goodchars(event,'0123456789',this)" required="">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Asal Sekolah</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="asal_sekolah">
+                                          <option>PAUD</option>
+                                          <option>TK</option>
+                                          <option>SD</option>
+                                          <option>Tidak Memilih</option>
+                                      </select>
+                                      <br><br>
+                                      <small>Nama Sekolah</small>
+                                      <input type="text" placeholder="..." class="form-control" name="nama_sekolah">
+                                      <br>
+                                      <small>Masuk Tahun</small>
+                                      <input type="text" placeholder="..." class="form-control" name="masuk_tahun"  size="3" maxlength="4" onKeyPress="return goodchars(event,'0123456789',this)">
+                                      <br>
+                                      <small>Tamat Tahun</small>
+                                      <input type="text" placeholder="..." class="form-control" name="tamat_tahun"  size="3" maxlength="4" onKeyPress="return goodchars(event,'0123456789',this)">
+                                      <br>
+                                      <small>Alamat Sekolah</small>
+                                      <input type="text" placeholder="..." class="form-control" name="alamat_sekolah">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Kesulitan yang dialami ketika di PAUD/TK/SD </label>
+                                  <div class="col-md-9">
+                                      <textarea type="text" placeholder="..." class="form-control" rows="4" name="kesulitan_yg_dialami"></textarea>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Aktivitas yang paling disukai</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="aktivitas_yg_disukai">
                                   </div>
                               </div>
                               <div class="form-group row">
@@ -146,11 +207,264 @@
           <div class="col-lg-12">
               <div class="card card-outline-info">
                   <div class="card-header" style="background-color: #2dc997">
+                      <h4 class="m-b-0 text-white">Entri Data Anak</h4>
+                  </div>
+                  <div class="card-body">
+                      <form autocomplete="off" method="post" action="<?php echo base_url("Data_anak/t_entri_data_anak")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
+                          <div class="form-body">
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">II. Kelahiran Anak</h3>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Lama Dalam Kandungan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="lama_kandungan">
+                                      <small style="color: #c0392b ">Dengan format  ... Bulan, ... Hari <i>(contoh : 9 Bulan, 10 Hari) </i></small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Keadaan Selama Dalam Kandungan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="keadaan_dalam_kandungan">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Keadaan Lahir</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="keadaan_lahir">
+                                          <option>Normal</option>
+                                          <option>Sulit</option>
+                                          <option>Prematur</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Proses Kelahiran</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="proses_kelahiran">
+                                          <option>Normal</option>
+                                          <option>Sulit</option>
+                                          <option>Operasi Caesar</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Yang Membantu Kelahiran</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="membantu_kelahiran">
+                                          <option>Dokter</option>
+                                          <option>Bidan</option>
+                                          <option>Lainnya</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Berat / Panjang Ketika Lahir</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="berat_panjang">
+                                      <small style="color: #c0392b ">Dengan format berat Kg, panjang Cm <i>(contoh : 3,5 Kg , 10 Cm) </i></small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Apgar Score</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="apgar_score">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Usia Ibu Ketika Anak Lahir</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="usia_ibu">
+                                  </div>
+                              </div>
+
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">III. Kesehatan Anak</h3>
+                              </div>
+
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Berat Badan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="berat_badan" size="3" maxlength="5" onKeyPress="return goodchars(event,'0123456789 kgKG',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Kg) </small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Tinggi Badan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="tinggi_badan" size="3" maxlength="6" onKeyPress="return goodchars(event,'0123456789 cmCM',this)">
+                                      <small class="form-control-feedback"> Diberi satuan (Cm) </small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Golongan Darah</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="gol_darah">
+                                        <?php foreach ($gol_darah->result() as $gol) { ?>
+                                          <option value="<?php echo $gol -> id_golongan_darah ?>"><?php echo $gol -> golongan_darah; ?></option>
+                                        <?php } ?>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Lama Masa Meminum Asi</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="lama_minum_asi">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Perkembangan Dalam 2 Bulan Pertama</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="perkembangan">
+                                      <small style="color: #c0392b">(Jika normal isikan normal, jika ada gangguan isikan ada gangguan dan sebutkan)</small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Kelainan Dalam Tubuh</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="kel_dalam_tubuh">
+                                      <small style="color: #c0392b">Dengan format pengisian jenis penyakit, usia, lamanya <i>(Contoh : hepatitis, 7 tahun, 3 bulan )</i> jika tidak ada kosongi saja.</small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Makan Tambahan yang diberikan setelah 4 Bulan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="makan_tambahan">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Imunisasi Yang Pernah Diberikan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="imunisasi">
+                                      <small style="color: #c0392b">Dengan format pengisian jenis imunisasi, usia saat imunisasi <i>(Contoh : campak, 3 tahun )</i> jika tidak ada kosongi saja.</small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Alergi Makanan Dan Obat</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="alergi">
+                                      <small style="color: #c0392b">Dengan format pengisian jenis alergi, sejak usia, akibat yang ditimbulkan <i>(Contoh : makan udang, 7 tahun, gatal-gatal)</i> jika tidak ada kosongi saja.</small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Penglihatan</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="penglihatan">
+                                          <option>Normal</option>
+                                          <option>Berkacamata Minus/Plus</option>
+                                      </select>
+                                  </div>
+                              </div>
+                               <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Pendengaran</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="pendengaran">
+                                          <option>Normal</option>
+                                          <option>Kurang Tanggap Terhadap Suara</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Penampilan</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="penampilan">
+                                          <option>Koordinasi Gerakan Terkendali</option>
+                                          <option>Koordinasi Gerakan Kurang Terkendali</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <!-- <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Penglihatan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="penglihatan">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Pendengaran</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="pendengaran">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Penampilan</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="penampilan">
+                                  </div>
+                              </div> -->
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">IV. Ciri Khas Anak</h3>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Ciri Fisik Yang Menonjol</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="ciri_fisik">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Ciri Kepribadian Yang Menonjol</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="ciri_kepribadian">
+                                          <option>Periang</option>
+                                          <option>Pemalu</option>
+                                          <option>Suka Menyendiri</option>
+                                          <option>Mudah Bergaul</option>
+                                          <option>Aktif</option>
+                                          <option>Pendiam</option>
+                                          <option>Pemarah</option>
+                                          <option>Lainnya</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <!-- <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Ciri Kepribadian Yang Menonjol</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="ciri_kepribadian">
+                                  </div>
+                              </div> -->
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Bakat Khusus Yang Menonjol</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="bakat">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Prestasi Yang Pernah Diraih</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="presatsi">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="form-actions">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="row">
+                                          <div class="offset-sm-3 col-md-9">
+                                              <button type="submit" class="btn btn-primary" style="float: right;" name="btnSimpan"> <i class="fa fa-check"></i> Simpan</button>
+                                              <!-- <button type="button" class="btn btn-inverse">Cancel</button> -->
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div><br>
+          </div>
+      </div>
+    </div>
+    <div id="menu3" class="container tab-pane fade"><br>
+      <div class="row">
+          <div class="col-lg-12">
+              <div class="card card-outline-info">
+                  <div class="card-header" style="background-color: #2dc997">
                       <h4 class="m-b-0 text-white">Entri Data Keluarga</h4>
                   </div>
                   <div class="card-body">
                       <form autocomplete="off" method="post" action="<?php echo base_url("Data_keluarga/t_entri_data_keluarga")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">
                           <div class="form-body">
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">V. Data Keluarga</h3>
+                              </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Ayah</label>
                                   <div class="col-md-9">
@@ -350,16 +664,25 @@
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Lama Komunikasi Dengan Ayah</label>
+                                  <label class="control-label text-left col-md-3">Kesempatan Berkomunikasi Ayah Dengan Anak</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="komunikasi_ayah">
+                                      <select class="form-control custom-select" name="komunikasi_ayah">
+                                          <option>Setiap Hari</option>
+                                          <option>Tidak Pernah</option>
+                                      </select>
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Lama Komunikasi Dengan Ibu</label>
+                                  <label class="control-label text-left col-md-3">Kesempatan Berkomunikasi Ibu Dengan Anak</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="komunikasi_ibu">
+                                      <select class="form-control custom-select" name="komunikasi_ibu">
+                                          <option>Setiap Hari</option>
+                                          <option>Tidak Pernah</option>
+                                      </select>
                                   </div>
+                              </div>
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">VI. Saudara Kandung Anak</h3>
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Nama Saudara Kandung</label>
@@ -380,9 +703,21 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Pendidikan Saudara Kandung</label>
                                   <div class="col-md-9">
-                                      <input type="text" placeholder="..." class="form-control" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                          <option>Tidak Memilih</option>
+                                          <option>TK Al-Baitul Amien</option>
+                                          <option>SD Al-Baitul Amien</option>
+                                          <option>SMP Al-Baitul Amien</option>
+                                          <option>Lainnya</option>
+                                      </select>
                                   </div>
                               </div>
+                              <!-- <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Pendidikan Saudara Kandung</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="pend_sdr_kandung">
+                                  </div>
+                              </div> -->
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Kelas Saudara Kandung</label>
                                   <div class="col-md-9">
@@ -393,6 +728,41 @@
                                   <label class="control-label text-left col-md-3">No. Induk Saudara Kandung</label>
                                   <div class="col-md-9">
                                       <input type="text" placeholder="..." class="form-control" name="no_induk_sdr_kandung" size="3" maxlength="16" onKeyPress="return goodchars(event,'0123456789',this)">
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <h3 class="control-label text-left col-md-12">VII. Data Tempat Tinggal</h3>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Status Tempat Tinggal</label>
+                                  <div class="col-md-9">
+                                      <select class="form-control custom-select" name="status_tempat_tinggal">
+                                          <option>Sendiri</option>
+                                          <option>Dinas</option>
+                                          <option>Kontrak</option>
+                                          <option>Lainnya</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Jarak Dari Rumah Ke Sekolah</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="jarak_rumah_ke_sekolah">
+                                      <small style="color: #c0392b">Dengan format diberi satuan jarak dibelakang angka <i>(Contoh : 8 Km)</i></small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Luas Bangunan Rumah</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="luas_bangunan_rumah">
+                                      <small style="color: #c0392b">Dengan format Panjang x Lebar <i>(Contoh : 5M x 6M)</i></small>
+                                  </div>
+                              </div>
+                              <div class="form-group row">
+                                  <label class="control-label text-left col-md-3">Jumlah Kamar</label>
+                                  <div class="col-md-9">
+                                      <input type="text" placeholder="..." class="form-control" name="jumlah_kamar">
+                                      <small style="color: #c0392b">Dengan format ... kamar <i>(Contoh : 4 Kamar)</i></small>
                                   </div>
                               </div>
                           </div>
@@ -414,12 +784,12 @@
           </div>
       </div>
     </div>
-    <div id="menu3" class="container tab-pane fade"><br>
+    <div id="menu4" class="container tab-pane fade"><br>
       <div class="row">
           <div class="col-lg-12">
               <div class="card card-outline-info">
                   <div class="card-header" style="background-color: #2dc997">
-                      <h4 class="m-b-0 text-white">Entri Riwayat Kesehatan</h4>
+                      <h4 class="m-b-0 text-white">Entri Kuisoner</h4>
                   </div>
                   <div class="card-body">
                       <form autocomplete="off" method="post" action="<?php echo base_url("Riwayat_kesehatan/t_entri_riwayat_kesehatan")?>" enctype="multipart/form-data" class="form-horizontal form-bordered">

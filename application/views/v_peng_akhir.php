@@ -1,5 +1,4 @@
 <?php $this->load->view('side/head') ?>
-<?php $this->load->view('side/navbar2') ?>
 <?php $this->load->view('side/navbar_Pengumuman') ?>
 <section id="head">
   <div class="container wow fadeIn">
@@ -8,9 +7,18 @@
     </div>
   </div>
 </section>
-<br>
 
-<h1>BELOM ADA ISINYA, heheheheh </h1>
+<center>
+	<div class="col-md-6">
+        <div class="card" style="margin-bottom: 30%; margin-top: 20%;">
+            <div class="card-header" style="background-color: #2980b9">
+                <h3 class="m-b-0 text-white">Pengumuman</h3></div>
+            <div class="card-body">
+                <h5>Pengumuman belum tersedia</h5>
+            </div>
+        </div>
+    </div>
+</center>
 
 <?php $this->load->view('side/footer') ?>
 <?php $this->load->view('side/js') ?>
