@@ -47,7 +47,7 @@ class Data_keluarga extends CI_Controller {
         $lama_komunikasi_dengan_ayah = $this -> input -> post ('komunikasi_ayah');
         $lama_komunikasi_dengan_ibu = $this -> input -> post ('komunikasi_ibu');
         $data = array(
-        'id_siswa'=> 2,
+        'id_siswa'=> 12,
         'nama_ayah'=>$nama_ayah,
         'nama_ibu'=>$nama_ibu,
         'id_agama_ayah'=>$agama_ayah,
@@ -89,7 +89,7 @@ class Data_keluarga extends CI_Controller {
         $kelas_saudara_kandung = $this -> input -> post ('kls_sdr_kandung');
         $no_induk_saudara_kandung = $this -> input -> post ('no_induk_sdr_kandung');
         $data2 = array(
-        'id_siswa'=> 2,
+        'id_siswa'=> 12,
         'nama_saudara_kandung'=>$nama_saudara_kandung,
         'id_jenis_kelamin'=>$jk_saudara_kandung,
         'pendidikan_saudara_kandung'=>$pend_saudara_kandung,

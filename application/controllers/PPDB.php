@@ -59,7 +59,7 @@ class PPDB extends CI_Controller {
             $upload_data = $this -> upload -> data ();
             $foto = "gallery/Bukti_pendaftaran/".$upload_data['file_name'];
         $data = array(
-        'id_user' => 5,
+        'id_user' => 2,
         'nama_bukti_gambar' => $foto
         );
         $insert_data = $this->db->insert('bukti_transaksi',$data);
