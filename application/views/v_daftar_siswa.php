@@ -28,6 +28,7 @@
 						<div class="form-group">
 							<label for="judul">No. Hp</label>
 							<input type="text" name="no_hp" class="form-control" size="3" maxlength="13" onKeyPress="return goodchars(event,'0123456789',this)" required="">
+							<small style="color: #c0392b">(Pastikan nomor Handphone anda benar dan aktif untuk menerima SMS notifikasi)</small>
 						</div>
 						<div class="form-group">
 							<label for="judul">Asal Sekolah</label>
