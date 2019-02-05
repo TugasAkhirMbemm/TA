@@ -4,19 +4,19 @@
  */
 class Upload_DU extends CI_Controller {
 
-	function __construct()
+  function __construct()
     {
-	parent::__construct();
+  parent::__construct();
         $this->load->model('data_model');
-    	$this->load->model('core');
+      $this->load->model('core');
     }
     public function index(){
 
     }
-   	public function UploadDaftarUlang(){
-		$this->load->view('v_upload_bukti_daftarulang');
-		
-	}
+    public function UploadDaftarUlang(){
+    $this->load->view('v_upload_bukti_daftarulang');
+    
+  }
     public function t_upload_bukti_daftar_ulang(){
         if(isset($_POST['btnSimpan'])){
           $config = array('upload_path' => './gallery/Bukti_daftar_ulang/',
@@ -28,12 +28,13 @@ class Upload_DU extends CI_Controller {
             $upload_data = $this -> upload -> data ();
             $foto = "gallery/Bukti_daftar_ulang/".$upload_data['file_name'];
         $data = array(
-        'id_user' => 5,
-        'nama_gambar' => $foto
+        'id_user' => 2,
+        'id_pembayaran'=>2,
+        'gambar' => $foto
         );
-        $insert_data = $this->db->insert(' bukti_transaksi_daftar_ulang',$data);
+        $insert_data = $this->db->insert('pendaftaran_ulang',$data);
       }
-      if ($insert_data >= 0) {
+      if ($insert_data) {
         $this->session->set_flashdata("Pesan", $this->core->alert_succes("Data Berhasil terkirim"));
         redirect(base_url().'Upload_DU/UploadDaftarUlang');
        } else{
@@ -43,5 +44,6 @@ class Upload_DU extends CI_Controller {
     }else{
       $this->session->set_flashdata("Pesan", $this->core->alert_time("Data Gagal terkirim, cek gambar"));
     }
+  
   }
 }
