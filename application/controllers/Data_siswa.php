@@ -15,10 +15,6 @@ class Data_siswa extends CI_Controller {
     $data['agama'] = $this->data_model->get_agama();
     $data['warga'] = $this->data_model->get_kewarganegaraan();
     $data['gol_darah'] = $this->data_model->get_gol_darah();
-    $data['soal_kemampuan'] = $this->data_model->get_soal_kemampuan();
-    // $data['soal_kemampuan2'] = $this->data_model->get_soal_kemampuan2();
-    $data['jawaban_kemampuan'] = $this->data_model->get_jawaban_kemampuan();
-    // $data['jawaban_kemampuan2'] = $this->data_model->get_jawaban_kemampuan2();
 		$this->load->view('v_entri_data_siswa',$data);
 	}
 	public function t_entri_data_siswa(){

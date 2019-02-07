@@ -799,12 +799,11 @@
                           <div class="form-body">
                              <div class="form-group row">
                                   <h3 class="control-label text-left col-md-12">VIII. Kemampuan Anak</h3>
-                                  <!-- <h6 class="control-label text-left col-md-12" style="color: #c0392b">Untuk soal no 1-10 (Selalu s.d. Tidak Pernah) soal no. 11-13 (Bisa s.d. Belum Bisa)</h6> -->
                               </div>
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Bangun tidur sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="bangun_tidur">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -815,7 +814,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Membersihkan tempat tidur sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="membersihkan_tempat_tidur">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -826,7 +825,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mandi sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mandi_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -837,7 +836,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Gosok gigi sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="gosok_gigi_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -848,7 +847,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengenakan pakaian sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mengenakan_pakaian_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -859,7 +858,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Makan sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="makan_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -870,7 +869,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Memakai sepatu sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="memakai_sepatu_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -881,7 +880,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Tidur tidak ditemani</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="tidur_tidak_ditemani">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -892,7 +891,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Bermain ke rumah tangga</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="bermain_ke_tetangga">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -903,7 +902,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Bermain sendiri</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="bermain_sendiri">
                                           <option>Selalu</option>
                                           <option>Sering</option>
                                           <option>Kadang</option>
@@ -917,7 +916,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengucapkan terima kasih</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mengucapkan_terima_kasih">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -927,7 +926,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengucapkan salam</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mengucapkan_salam">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -937,7 +936,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menjawab salam</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="menjawab_salam">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -947,7 +946,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Hafal do'a do'a tertentu</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="hafal_doa_doa">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -957,7 +956,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengenal huruf latin</label>
                                   <div class="col-md-9">
-                                     <select class="form-control custom-select" name="pend_sdr_kandung">
+                                     <select class="form-control custom-select" name="mengenal_huruf_latin">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -967,7 +966,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengenal huruf arab</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mengenal_huruf_arab">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -977,7 +976,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mengenal angka sampai dengan 5</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mengenal_angka_sampai_5">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -987,7 +986,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menulis angka sampai dengan 5</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="menulis_angka_sampai_5">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -997,7 +996,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menulis huruf latin</label>
                                   <div class="col-md-9">
-                                     <select class="form-control custom-select" name="pend_sdr_kandung">
+                                     <select class="form-control custom-select" name="menulis_latin">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -1007,7 +1006,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menulis huruf arab</label>
                                   <div class="col-md-9">
-                                     <select class="form-control custom-select" name="pend_sdr_kandung">
+                                     <select class="form-control custom-select" name="menulis_arab">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -1017,7 +1016,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menggambar bentuk sesuatu</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="menggambar">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -1027,7 +1026,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Mewarnai suatu gambar</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="mewarnai_gambar">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -1037,7 +1036,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Menceritakan pengalaman</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="menceritakan_pengalaman">
                                           <option>Bisa</option>
                                           <option>Kurang Bisa</option>
                                           <option>Belum Bisa</option>
@@ -1050,7 +1049,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Belajar baca Al-Qur'an</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="belajar_baca_quran">
                                           <option>Sudah Pernah</option>
                                           <option>Belum Pernah</option>
                                       </select>
@@ -1059,7 +1058,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Buku yang digunakan</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="buku_yg_digunakan">
                                           <option>Iqro'</option>
                                           <option>Qiroati</option>
                                           <option>Tilawati</option>
@@ -1069,7 +1068,7 @@
                               <div class="form-group row">
                                   <label class="control-label text-left col-md-3">Pencapaian jilid</label>
                                   <div class="col-md-9">
-                                      <select class="form-control custom-select" name="pend_sdr_kandung">
+                                      <select class="form-control custom-select" name="pencapaian_jilid">
                                           <option>1</option>
                                           <option>2</option>
                                           <option>3</option>
@@ -1077,9 +1076,9 @@
                                   </div>
                               </div>
                               <div class="form-group row">
-                                  <label class="control-label text-left col-md-3">Surat pendak yang sudah dihafal</label>
+                                  <label class="control-label text-left col-md-3">Surat pendek yang sudah dihafal</label>
                                   <div class="col-md-9">
-                                      <textarea class="form-control" placeholder="..." rows="3" name=""></textarea>
+                                      <textarea class="form-control" placeholder="..." rows="3" name="surat_pendek_yang_dihafal"></textarea>
                                       <small style="color: #c0392b ">Sebutkan semua yang anda hafal</small>
                                   </div>
                               </div>
